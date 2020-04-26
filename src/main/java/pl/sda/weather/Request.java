@@ -3,11 +3,27 @@ package pl.sda.weather;
 public class Request {
 
     private String type;
-    private  String query;
+    private String query;
+    private String language;
+    private String unit;
 
-    public Request(){}
+    public String getLanguage() {
+        return language;
+    }
 
+    public void setLanguage(String language) {
+        this.language = language;
+    }
 
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    public Request() {}
     public Request(String type, String query) {
         this.type = type;
         this.query = query;
@@ -17,12 +33,12 @@ public class Request {
         return type;
     }
 
-    public String getQuery() {
-        return query;
-    }
-
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getQuery() {
+        return query;
     }
 
     public void setQuery(String query) {
